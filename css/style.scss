@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Cabin", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+}
+
+/* -------- HEADER -------- */
+
+.logo {
+  font-size: 1.5rem;
+  margin: 1rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hamburger-menu {
+  position: absolute;
+  top: 0.8rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.bar {
+  height: 3px;
+  width: 100%;
+  background-color: black;
+  border-radius: 10px;
+}
+
+.navbar-links {
+  display: none;
+
+  ul {
+    display: flex;
+    font-weight: 700;
+    :last-child a {
+      color: #bb2000;
+    }
+  }
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    padding: 1rem;
+    display: block;
+  }
+}
+
+/* -------- SLIDER -------- */
+
+.slider {
+  width: 100%;
+  background-color: #f9f9f9;
+  height: 250px;
+  line-height: 250px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+main {
+  width: 95%;
+  margin: auto;
+}
+
+/* -------- GRID -------- */
+
+.grid-container {
+  padding: 1rem 0;
+  display: grid;
+  grid-gap: 0.8rem;
+  grid-template-columns: repeat(2, auto);
+}
+
+.grid-element {
+  display: block;
+  background-color: #f9f9f9;
+  width: 100%;
+  height: 25vh;
+  line-height: 25vh;
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-align: center;
+  border: red solid 1px;
+}
+
+/* -------- DESKTOP -------- */
+
+@media (min-width: 768px) {
+  .hamburger-menu {
+    display: none;
+  }
+
+  .navbar-links {
+    margin: auto;
+    display: block;
+  }
+
+  main {
+    width: 85%;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(3, auto);
+  }
+}
