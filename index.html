@@ -4,78 +4,162 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>ARMODO</title>
+    <title>Armodo</title>
   </head>
   <body>
-    <header>
-      <div class="logo">ARMODO</div>
-      <nav class="navbar">
-        <a href="#" title="" class="hamburger-menu">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </a>
-        <div class="navbar-links">
+    <div class="main-wrapper">
+      <header class="flex-container">
+        <img class="logo" src="img/armodo_logo.png" alt="Armodo" />
+        <a class="search" href="#" title=""></a>
+        <a class="heart" href="#" title=""></a>
+        <a class="cart" href="#" title=""><p id="items">12</p></a>
+        <nav id="top-nav">
+          <div class="hamburger-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+          <div class="top-nav-links">
+            <ul>
+              <li><a href="#" title="">damskie</a></li>
+              <li><a href="#" title="">męskie</a></li>
+              <li><a href="#" title="">torebki</a></li>
+              <li><a href="#" title="">akcesoria</a></li>
+              <li><a href="#" title="">premium</a></li>
+              <li><a href="#" title="">marki</a></li>
+              <li><a href="#" title="">nowości</a></li>
+              <li><a href="#" title="">wyprzedaż</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+      <div class="discount">
+        <p>-20% na całą kolekcję zimową!</p>
+      </div>
+
+      <div class="slider">
+        <p>SLIDER</p>
+      </div>
+
+      <main class="container">
+        <section class="grid-container">
+          <a href="#" title="">
+            <div class="grid-element">
+              <p>baner reklamowy</p>
+            </div>
+          </a>
+          <a href="#" title="">
+            <div class="grid-element">
+              <p>baner reklamowy</p>
+            </div>
+          </a>
+          <a href="#" title="">
+            <div class="grid-element">
+              <p>baner reklamowy</p>
+            </div>
+          </a>
+          <a href="#" title="">
+            <div class="grid-element">
+              <p>baner reklamowy</p>
+            </div>
+          </a>
+          <a href="#" title="">
+            <div class="grid-element">
+              <p>baner reklamowy</p>
+            </div>
+          </a>
+          <a href="#" title="">
+            <div class="grid-element">
+              <p>baner reklamowy</p>
+            </div>
+          </a>
+        </section>
+      </main>
+      <footer>
+        <div class="newsletter-wrapper">
+          <div class="newsletter">
+            <p>
+              -10% na pierwsze zakupy<span
+                >Zapisz sie do newslettera i zyskaj rabat</span
+              >
+            </p>
+            <button>otrzymaj rabat</button>
+          </div>
+        </div>
+        <div class="bottom-nav">
           <ul>
-            <li><a href="#" title="">damskie</a></li>
-            <li><a href="#" title="">męskie</a></li>
-            <li><a href="#" title="">torebki</a></li>
-            <li><a href="#" title="">akcesoria</a></li>
-            <li><a href="#" title="">premium</a></li>
-            <li><a href="#" title="">marki</a></li>
-            <li><a href="#" title="">nowości</a></li>
-            <li><a href="#" title="">wyprzedaż</a></li>
+            <li id="order">
+              <p class="bold">moje zamówienie</p>
+              <ul class="links">
+                <li><a href="#" title="">status zamówienia</a></li>
+                <li><a href="#" title="">śledzenie przesyłki</a></li>
+                <li><a href="#" title="">chcę zareklamować towar</a></li>
+                <li><a href="#" title="">chcę zwrócić towar</a></li>
+                <li><a href="#" title="">chcę wymienić towar</a></li>
+              </ul>
+            </li>
+            <li id="account">
+              <p class="bold">moje konto</p>
+              <ul class="links">
+                <li><a href="#" title="">zarejestruj się</a></li>
+                <li><a href="#" title="">moje zamówienia</a></li>
+                <li><a href="#" title="">koszyk</a></li>
+                <li><a href="#" title="">ulubione</a></li>
+                <li><a href="#" title="">historia transakcji</a></li>
+                <li><a href="#" title="">moje rabaty</a></li>
+                <li><a href="#" title="">newsletter</a></li>
+              </ul>
+            </li>
+            <li id="terms">
+              <p class="bold">regulaminy</p>
+              <ul class="links">
+                <li><a href="#" title="">informacje o sklepie</a></li>
+                <li><a href="#" title="">wysyłka</a></li>
+                <li><a href="#" title="">sposoby płatności i prowizji</a></li>
+                <li><a href="#" title="">regulamin</a></li>
+                <li><a href="#" title="">polityka prywatności</a></li>
+                <li><a href="#" title="">odsąpienie od umowy</a></li>
+              </ul>
+            </li>
+            <li id="more">
+              <p class="bold">więcej</p>
+              <ul class="links">
+                <li><a href="#" title="">o nas</a></li>
+                <li><a href="#" title="">blog</a></li>
+                <li><a href="#" title="">jak dobrać rozmiar</a></li>
+                <li><a href="#" title="">tabela rozmiarów</a></li>
+                <li><a href="#" title="">pielęgnacja obuwia</a></li>
+                <li><a href="#" title="">technologie</a></li>
+              </ul>
+            </li>
           </ul>
         </div>
-      </nav>
-    </header>
-
-    <div class="slider">
-      <p>SLIDER</p>
+        <div class="contact">
+          <div>
+            <a class="phone" href="tel:+48786818322"
+              ><img src="img/phone_black.svg" alt="" />+48 786 818 322</a
+            >
+            <a class="mail" href="mailto:info@armodo.com"
+              ><img src="img/mail.svg" alt="" />info@armodo.com</a
+            >
+            <a class="facebook" href="#"
+              ><img src="img/facebook_blue.svg" alt="" />Odwiedź nas na
+              facebooku</a
+            >
+          </div>
+          <a href="#" title=""
+            ><img class="idosell" src="img/idosell.svg" alt=""
+          /></a>
+        </div>
+        <img class="payment" src="img/payment-method.svg" alt="" />
+      </footer>
     </div>
-
-    <main>
-      <section class="grid-container">
-        <a href="#" title="">
-          <div class="grid-element">
-            <p>baner reklamowy</p>
-          </div>
-        </a>
-        <a href="#" title="">
-          <div class="grid-element">
-            <p>baner reklamowy</p>
-          </div>
-        </a>
-        <a href="#" title="">
-          <div class="grid-element">
-            <p>baner reklamowy</p>
-          </div>
-        </a>
-        <a href="#" title="">
-          <div class="grid-element">
-            <p>baner reklamowy</p>
-          </div>
-        </a>
-        <a href="#" title="">
-          <div class="grid-element">
-            <p>baner reklamowy</p>
-          </div>
-        </a>
-        <a href="#" title="">
-          <div class="grid-element">
-            <p>baner reklamowy</p>
-          </div>
-        </a>
-      </section>
-
-      <section></section>
-      <section></section>
-      <section></section>
-    </main>
-    <footer></footer>
+    <script src="script/script.js"></script>
   </body>
 </html>

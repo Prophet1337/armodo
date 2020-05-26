@@ -1,3 +1,4 @@
+/* -------- MAIN -------- */
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -5,38 +6,95 @@
   padding: 0;
 }
 
+html,
 body {
+  height: 100vh;
   font-family: "Cabin", sans-serif;
+  font-size: 10px;
+  color: #231f20;
+}
+
+li {
+  list-style: none;
 }
 
 a {
   text-decoration: none;
   text-transform: uppercase;
-  color: black;
+  color: #231f20;
+}
+
+.container {
+  width: 95%;
+  margin: auto;
 }
 
 /* -------- HEADER -------- */
-.logo {
-  font-size: 1.5rem;
-  margin: 1rem;
-}
-
-.navbar {
+.flex-container {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 50px;
+}
+
+.logo {
+  padding-left: 12px;
+  width: 145px;
+}
+
+/* -------- HEADER ICONS -------- */
+.search,
+.heart,
+.cart {
+  width: 100%;
+  height: 100%;
+}
+
+.search {
+  background: url(../img/search.png) no-repeat center center;
+}
+
+.heart {
+  background: url(../img/heart.png) no-repeat center center;
+}
+
+.cart {
+  background: url(../img/cart.png) no-repeat center center;
+  position: relative;
+}
+
+.cart #items {
+  background-color: #fff;
+  font-size: 1.2em;
+  font-weight: 700;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+/* -------- HEADER NAV -------- */
+#top-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  width: 100%;
 }
 
 .hamburger-menu {
-  position: absolute;
-  top: 0.8rem;
-  right: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -47,93 +105,313 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 30px;
-  height: 21px;
+  width: 18px;
+  height: 14px;
 }
 
 .bar {
-  height: 3px;
+  height: 2px;
   width: 100%;
   background-color: black;
   border-radius: 10px;
 }
 
-.navbar-links {
+.top-nav-links {
   display: none;
 }
 
-.navbar-links ul {
+.top-nav-links ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   font-weight: 700;
 }
 
-.navbar-links ul :last-child a {
+.top-nav-links ul :last-child a {
   color: #bb2000;
 }
 
-.navbar-links li {
-  list-style: none;
-}
-
-.navbar-links a {
+.top-nav-links a {
   padding: 1rem;
   display: block;
 }
 
+/* -------- DISCOUNT BANNER -------- */
+.discount {
+  margin-top: 50px;
+  background-color: #bb2000;
+  color: #fff;
+  font-size: 1.5em;
+  text-align: center;
+  height: 47px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.discount p {
+  width: 100%;
+}
+
 /* -------- SLIDER -------- */
 .slider {
-  width: 100%;
   background-color: #f9f9f9;
-  height: 250px;
-  line-height: 250px;
-  letter-spacing: 2px;
+  height: 428px;
+  font-weight: 600;
+  font-size: 2.5em;
+  letter-spacing: 0.2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-main {
-  width: 95%;
-  margin: auto;
-}
-
-/* -------- GRID -------- */
+/* -------- GRID BANNERS -------- */
 .grid-container {
-  padding: 1rem 0;
+  padding: 1em 0;
   display: -ms-grid;
   display: grid;
-  grid-gap: 0.8rem;
+  grid-gap: 0.8em;
   -ms-grid-columns: (auto)[2];
       grid-template-columns: repeat(2, auto);
 }
 
 .grid-element {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 30px;
   background-color: #f9f9f9;
-  width: 100%;
   height: 25vh;
-  line-height: 25vh;
-  font-size: 9px;
-  letter-spacing: 2px;
+  font-weight: 600;
+  font-size: 1.3em;
+  letter-spacing: 0.2em;
   text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border: red solid 1px;
 }
 
-/* -------- DESKTOP -------- */
+/* -------- FOOTER NEWSLETTER -------- */
+.newsletter-wrapper {
+  background-color: #f9f9f9;
+  text-align: center;
+  padding: 30px 10px 36px;
+}
+
+.newsletter-wrapper .newsletter p {
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 2em;
+  letter-spacing: 0.2em;
+}
+
+.newsletter-wrapper .newsletter p span {
+  display: block;
+  font-weight: 400;
+  text-transform: lowercase;
+  letter-spacing: 0;
+}
+
+.newsletter-wrapper .newsletter p span::first-letter {
+  text-transform: uppercase;
+}
+
+.newsletter-wrapper .newsletter button {
+  margin-top: 35px;
+  height: 44px;
+  width: 195px;
+  background-color: #231f20;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.3em;
+  letter-spacing: 0.1em;
+  border: none;
+}
+
+/* -------- FOOTER LINKS -------- */
+.bottom-nav {
+  padding: 16px 0;
+  text-align: center;
+  background-color: #231f20;
+}
+
+.bottom-nav a {
+  color: #fff;
+}
+
+.bold {
+  padding: 12px 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  letter-spacing: 0.2em;
+  color: #fff;
+}
+
+.links {
+  line-height: 3em;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.links a {
+  display: block;
+  text-transform: lowercase;
+}
+
+.links li {
+  font-size: 1.3em;
+}
+
+.links li::first-letter {
+  text-transform: uppercase;
+}
+
+.drop {
+  padding: 0 0 17px;
+  max-height: 250px;
+}
+
+/* -------- FOOTER ICONS -------- */
+.phone,
+.mail,
+.facebook,
+.payment {
+  display: none;
+}
+
+.contact {
+  padding: 17px 0 15px;
+  text-align: center;
+}
+
+.idoosell {
+  padding: 0;
+}
+
+/* -------- DESKTOP MEDIA -------- */
 @media (min-width: 768px) {
+  /* -------- MAIN -------- */
+  .container {
+    width: 85%;
+  }
+  /* -------- HEADER -------- */
+  .flex-container {
+    position: static;
+    margin-top: 47px;
+  }
+  /* -------- HEADER NAV-------- */
   .hamburger-menu {
     display: none;
   }
-  .navbar-links {
+  .top-nav-links {
     margin: auto;
     display: block;
   }
-  main {
-    width: 85%;
+  /* -------- DISCOUNT BANNER -------- */
+  .discount {
+    position: absolute;
+    top: 0;
+    margin-top: 0;
+    width: 100%;
   }
+  /* -------- GRID BANNERS -------- */
   .grid-container {
     -ms-grid-columns: (auto)[3];
         grid-template-columns: repeat(3, auto);
+  }
+  /* -------- FOOTER LINKS -------- */
+  .bottom-nav {
+    padding: 40px 0;
+  }
+  .bottom-nav ul {
+    margin: auto;
+    width: 75%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .bottom-nav ul li {
+    width: 100%;
+  }
+  .links {
+    max-height: 250px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .drop {
+    padding: 0;
+  }
+  /* -------- FOOTER ICONS -------- */
+  .phone,
+  .mail,
+  .facebook,
+  .payment {
+    display: block;
+  }
+  .facebook {
+    color: #3a559f;
+  }
+  .contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 75%;
+    margin: auto;
+  }
+  .contact div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .contact div a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .contact div img {
+    padding-right: 4px;
+  }
+  .contact a {
+    height: 18px;
+    text-transform: lowercase;
+    font-size: 1.3em;
+    padding: 0 10px;
+  }
+  .payment {
+    padding: 30px 0 22px;
+    width: 55%;
+    margin: auto;
   }
 }
 /*# sourceMappingURL=style.css.map */
